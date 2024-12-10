@@ -1,23 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./sunflower.png";
+import "./App.css";
+import Hero from "./Hero";
+import { useState } from "react";
 
 function App() {
+  // const [hide, setHidden] = useState(true);
+
+  const [show, setShow] = useState(false);
+  const motto = "Semper Fidelis";
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {show ? (
+        <div>
+          <Hero message={motto} />
+          <button onClick={() => setShow(false)} className="btn">
+            Home
+          </button>
+        </div>
+      ) : (
+        <header className="App-header">
+          <h2>SUNFLOWER</h2>
+          <img src={logo} className="App-logo" alt="logo" />
+          <button onClick={() => setShow(true)} className="btn">
+            ENTER
+          </button>
+        </header>
+      )}
     </div>
   );
 }

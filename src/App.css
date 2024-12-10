@@ -1,3 +1,7 @@
+body {
+  background-color: aliceblue;
+}
+
 .App {
   text-align: center;
 }
@@ -11,10 +15,14 @@
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
+
+  /* .App-logo img {
+    filter: opacity(0.5) drop-shadow(0 0 0 #7fbfff);
+  } */
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #304060;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -25,7 +33,16 @@
 }
 
 .App-link {
-  color: #61dafb;
+  color: #7fbfff;
+}
+
+.fancyTable {
+  color: #7fbfff;
+  background-color: #304060;
+}
+
+.btn {
+  border-radius: 8px;
 }
 
 @keyframes App-logo-spin {
